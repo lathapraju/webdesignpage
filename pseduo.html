@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+    <title>Idegene</title>
+    <head>
+        <link rel="stylesheet" href="css/pseduo.css" type="text/css">
+        <style>
+        
+            .menu ul li{
+                 display: inline-block;
+              
+                }
+                .menu ul li a{
+                    text-decoration:none; color: blue;
+                    padding: 0 20px;
+                }
+         /* firstchild color */
+                    .menu ul li:first-child{
+                        background-color: chartreuse;
+                    }
+            /*inside color  */
+            .menu ul li:first-child a{
+                        color: crimson;
+                    } 
+            .menu ul li:last-child a{
+                background-color: cyan;
+                color:black;
+            }
+            /* second child color */
+            .menu ul li:nth-child(2) a{
+                background-color: cyan;
+                color:black;
+            }
+            .menu ul li:nth-child(3) a{
+                background-color: cyan;
+                color:black;
+            }
+
+            .pseudoelemt h1::first-letter{
+                color: chartreuse;
+                background-color: blue;
+                padding: 10px;
+            }
+            
+            .pseudoelemt p::first-line{
+                color: brown;
+                background-color: cadetblue;
+            }
+            /* to change bullet color */
+             .pseudoelemt ul li::marker{
+                 color: coral;
+             }
+
+/* to inside selecting */
+             ::selection{
+                 background-color: crimson;
+                 color:white;
+             }
+             h1::selection{
+                 background-color: cyan;
+                 color: darkgoldenrod;
+             }
+/* to add letter before */
+             .pseudoelemt ul li::before{
+                 content: 'A';
+             }
+             .pseudoelemt ul li::after{
+                 content: 'B';
+             }
+.pseudoelemt ul li::before{
+    content: url("Images1/check.png");`
+}
+.btn-style{ 
+    padding: 15px  20px;
+    border: 1px solid blueviolet;
+    border-radius: 2px;
+    background-color: red;
+    display: inline-block;
+    color: white;
+}
+
+.dropdowncontent ul li{
+    list-style-type: none;
+}
+
+.dropdowncontent ul li {
+   box-shadow: -1px 0px 25px 0px rgba(184, 103, 126, 0.86);
+   width: 200px;
+   border-radius: 4px;
+ display: none;
+}
+
+.dropdownmenu:hover .dropdowncontent{
+    display: block;
+}
+        </style>
+
+
+        </head>
+        <body>  
+            <div class="menu">
+                <ul>
+                    <li><a href=""> Home </a></li>
+                    <li><a href="">Edit</a></li>
+                    <li><a href="">contact us</a></li>
+                    <li><a href="">service us</a></li>
+                </ul>
+                <h1> pseduo Element</h1>
+                <p>It is used to specify parts of Element</p>
+
+            </div>
+
+                <div class="pseudoelemt">
+
+                    <h1> pseduo Element</h1>
+                    <p>It is used to specify parts of Element <br>
+                        It is used to specify parts of Element It is used to specify parts of Element</p>
+                        <ul>
+                            <li> web design</li>
+                            <li>oss</li>
+                            <li>ux developer</li>
+                            <li>up developer</li>
+                        
+                            
+                        </ul>
+                    </div>
+<div class="dropdownmenu">
+    <div class="btn-style">My dashboard</div>
+    <div class="dropdowncontent">
+    <ul>
+         <li>MY profile</li>
+         <li>My course</li>
+         <li>My subscription</li>
+         <li>My order</li>
+    </ul>
+
+</div>
+
+</div>
+
+          
+           
+
+
+        </body>
+        </html>
